@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Sidebar with Icons</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Estilo da barra lateral */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 250px;
+      background-color: #343a40; /* Cor de fundo */
+      padding-top: 56px; /* Espaçamento superior para o cabeçalho */
+      overflow-y: auto;
+      z-index: 1000; /* Garante que a barra lateral fique acima do conteúdo */
+      transition: background-color 0.3s; /* Transição suave para a mudança de cor de fundo */
+    }
+
+    /* Estilo do cabeçalho da barra lateral */
+    .sidebar-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      background-color: #212529; /* Cor de fundo do cabeçalho */
+      padding: 15px;
+      z-index: 1001; /* Garante que o cabeçalho fique acima da barra lateral */
+      transition: background-color 0.3s; /* Transição suave para a mudança de cor de fundo */
+    }
+
+    /* Estilo do logo */
+    .sidebar-header .logo {
+      color: #fff; /* Cor do texto do logo */
+      font-size: 24px; /* Tamanho da fonte do logo */
+      transition: color 0.3s; /* Transição suave para a mudança de cor do logo */
+    }
+
+    /* Estilo dos itens do menu */
+    .sidebar-menu-item {
+      color: #fff; /* Cor do texto */
+      padding: 10px 20px; /* Espaçamento interno */
+      text-decoration: none; /* Remove sublinhado dos links */
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+    }
+
+    /* Estilo dos ícones nos itens do menu */
+    .sidebar-menu-item i {
+      margin-right: 10px; /* Espaçamento à direita do ícone */
+    }
+
+    /* Estilo dos itens do menu ao passar o mouse */
+    .sidebar-menu-item:hover {
+      background-color: #454d55; /* Cor de fundo ao passar o mouse */
+    }
+
+    /* Estilo do logo ao passar o mouse */
+    .sidebar-header:hover .logo {
+      color: #007bff; /* Cor azul ao passar o mouse */
+    }
+
+    /* Estilo do cabeçalho ao passar o mouse */
+    .sidebar-header:hover {
+      background-color: #303030; /* Cor de fundo escura ao passar o mouse */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Barra lateral -->
+<nav class="sidebar">
+  <!-- Cabeçalho da barra lateral -->
+  <div class="sidebar-header">
+    <span class="logo">Logo</span>
+  </div>
+
+  <!-- Itens do menu -->
+  <a href="#" class="sidebar-menu-item"><i class="fas fa-home"></i> Home</a>
+  <a href="#" class="sidebar-menu-item"><i class="fas fa-user"></i> About</a>
+  <a href="#" class="sidebar-menu-item"><i class="fas fa-cogs"></i> Settings</a>
+  <a href="#" class="sidebar-menu-item"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+
+<!-- Conteúdo principal -->
+<div class="main-content">
+  <h1>Main Content</h1>
+  <p>This is the main content area.</p>
+</div>
+
+<!-- Bootstrap e jQuery são necessários para o funcionamento do código -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
